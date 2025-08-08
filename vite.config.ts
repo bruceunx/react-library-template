@@ -14,6 +14,7 @@ export default defineConfig({
     libInjectCss(),
     dts({
       tsconfigPath: "tsconfig.app.json",
+      exclude: ["tests/**/*", "**/*.stories.*"],
     }),
   ],
   build: {
