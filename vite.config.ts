@@ -24,7 +24,9 @@ export default defineConfig({
     rollupOptions: {
       external: ["react", "react-dom", "react/jsx-runtime"],
       input: Object.fromEntries(
-        globSync(["src/components/*.tsx", "src/main.ts"]).map((file) => {
+        globSync(["src/components/*.tsx", "src/main.ts"], {
+          exclude: ["src/**/*.stories.ts"],
+        }).map((file) => {
           const entryName = path.relative(
             "src",
             file.slice(0, file.length - path.extname(file).length),
@@ -47,6 +49,6 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     globals: true,
-    setupFiles: "./tests/vitest.setup.ts"
+    setupFiles: "./tests/vitest.setup.ts",
   },
 });
