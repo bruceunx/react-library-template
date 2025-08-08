@@ -1,6 +1,6 @@
 .DEFAULT_GOLA := dev
 
-.PHONY: dev test
+.PHONY: dev test build
 
 dev: test
 	bun run storybook
