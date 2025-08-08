@@ -1,0 +1,40 @@
+{
+  "name": "bun-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b && vite build",
+    "lint": "biome .",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.1.4",
+    "@chromatic-com/storybook": "^4.1.0",
+    "@storybook/addon-a11y": "^9.1.1",
+    "@storybook/addon-docs": "^9.1.1",
+    "@storybook/addon-onboarding": "^9.1.1",
+    "@storybook/react-vite": "^9.1.1",
+    "@testing-library/jest-dom": "^6.6.4",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^24.2.0",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "ajv": "^8.17.1",
+    "globals": "^16.3.0",
+    "jsdom": "^26.1.0",
+    "storybook": "^9.1.1",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.0",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-lib-inject-css": "^2.2.2",
+    "vitest": "^3.2.4"
+  }
+}
