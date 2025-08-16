@@ -6,12 +6,14 @@ import { libInjectCss } from "vite-plugin-lib-inject-css";
 import { globSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import dts from "vite-plugin-dts";
+import tailwindcss from "@tailwindcss/vite"
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
   plugins: [
     react(),
     libInjectCss(),
+    tailwindcss(),
     dts({
       tsconfigPath: "tsconfig.app.json",
       exclude: ["tests/**/*", "**/*.stories.*"],
